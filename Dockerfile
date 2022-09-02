@@ -13,10 +13,10 @@ mkdir /usr/share/oss/
 WORKDIR /usr/share/oss/
 
 COPY bin /opt/oss/
-COPY app.js package.json /usr/share/oss/
+COPY app.js package.json entrypoint.sh /usr/share/oss/
 
 RUN npm install
 
-EXPOSE 80
+EXPOSE 80 8080
 
-ENTRYPOINT ["node", "app.js"]
+ENTRYPOINT ["/bin/sh", "entrypoint.sh"]
