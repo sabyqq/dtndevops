@@ -3,8 +3,14 @@
 Ini merupakan source code image docker untuk keperluan test interview posisi DevOps Engineer di PT Datasintesa Teknologi Nusantara
 
 ## Build Image
+Build image manual
 ```shell
 docker build . -t node
+
+```
+atau pull image dari docker registry
+```shell
+docker pull sabyq/dtndevops:latest
 ```
 
 ## Run image
