@@ -48,7 +48,7 @@ stop | Menghentikan seluruh services (nginx, express dan postgresql)
 docker exec -it node /opt/oss/bin/stop
 ```
 
-backup | Melakukan backup database postgresql dengan ke /opt/oss/data/backups/db.sql
+backup | Melakukan backup database ke /opt/oss/data/backups/db.sql
 ```shell
 docker exec -it node /opt/oss/bin/backup
 ```
