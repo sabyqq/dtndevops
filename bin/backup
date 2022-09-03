@@ -1,0 +1,3 @@
+#!/bin/bash
+
+su postgres -c 'pgdump database > /opt/oss/data/backups/db.sql'

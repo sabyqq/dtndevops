@@ -1,9 +1,11 @@
-#!/bin/sh
-
-sed -i 's|80|8080|' /etc/nginx/nginx.conf
+#!/bin/bash
 
 set -m
+
 nginx -g 'daemon off;' &
+
 node app.js &
+
+su postgres -c '/usr/bin/postmaster -D /var/lib/pgsql/data'
 
 fg %1
