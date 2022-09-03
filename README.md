@@ -5,7 +5,7 @@ Ini merupakan source code image docker untuk keperluan test interview posisi Dev
 ## Build Image
 Build image manual
 ```shell
-docker build . -t node
+docker build . -t dtndevops
 
 ```
 atau pull image dari docker registry
@@ -15,7 +15,7 @@ docker pull sabyq/dtndevops:latest
 
 ## Run image
 ```shell
-docker run -d -p 80:80 -p 8080:8080 -p 5432:5432 --name node node
+docker run -d -p 80:80 -p 8080:8080 -p 5432:5432 --name dtn dtndevops
 ```
 
 ## Pengujian services berjalan
@@ -34,21 +34,21 @@ su postgres
 ```
 Lalu akses database menggunakan perintah berikut
 ```shell
-psql -h localhost:5432
+psql -h localhost
 ```
 
 ## Bin Start Stop Backup
 start | Menjalankan seluruh services (nginx, express dan postgresql)
 ```shell
-docker exec -it node /opt/oss/bin/start
+docker exec -it dtn /opt/oss/bin/start
 ```
 
 stop | Menghentikan seluruh services (nginx, express dan postgresql)
 ```shell
-docker exec -it node /opt/oss/bin/stop
+docker exec -it dtn /opt/oss/bin/stop
 ```
 
 backup | Melakukan backup database ke /opt/oss/data/backups/db.sql
 ```shell
-docker exec -it node /opt/oss/bin/backup
+docker exec -it dtn /opt/oss/bin/backup
 ```
