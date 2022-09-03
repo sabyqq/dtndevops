@@ -19,15 +19,15 @@ docker run -d -p 80:80 -p 8080:8080 -p 5432:5432 --name node node
 ```
 
 ## Pengujian services berjalan
-nginx
+### Nginx
 ```shell
 curl localhost:8080
 ```
-Node.JS / Express
+### Node.JS / Express
 ```shell
 curl localhost
 ```
-Database Postgresql
+### Database Postgresql
 Pastikan user menggunakan postgres
 ```shell
 su postgres
