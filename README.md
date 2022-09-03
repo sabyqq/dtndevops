@@ -34,7 +34,7 @@ su postgres
 ```
 Lalu akses database menggunakan perintah berikut
 ```shell
-psql -h localhost:5432
+psql -h localhost
 ```
 
 ## Bin Start Stop Backup
