@@ -1,11 +1,11 @@
 #!/bin/bash
 
-while true; do
+set -m
+
 read -p $'1. Postgresql\n2. node\n3. nginx \n4. cancel \nWhich process you want to start? : ' select
 case $select in
-	3 ) set -m nginx -g 'daemon off;' fg%1; break;;
-	2 ) set -m node app.js fg%1; break;;
-	1 ) su postgres -c '/usr/bin/postmaster -D /var/lib/pgsql/data'; break;;
+	1 ) su postgres -c '/usr/bin/postmaster -D /var/lib/pgsql/data' &;;
+	2 ) node app.js &;;
+	3 ) nginx -g 'daemon off;' &;;
 	4 ) exit;;
 esac
-done
